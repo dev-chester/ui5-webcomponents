@@ -60,6 +60,7 @@ class UI5Element extends HTMLElement {
 
 		if (!slotsAreManaged) {
 			if (needsShadowDOM) {
+				this._updateAllProperties();
 				RenderScheduler.renderImmediately(this);
 			}
 		}
@@ -352,6 +353,34 @@ class UI5Element extends HTMLElement {
 	_upgradeAllProperties() {
 		const allProps = this.constructor.getMetadata().getPropertiesList();
 		allProps.forEach(this._upgradeProperty, this);
+	}
+
+	/**
+	 * @private
+	 */
+	_updateAllProperties() {
+		const properties = this.constructor.getMetadata().getProperties();
+		Object.entries(properties).forEach(pair => {
+			const propName = pair[0];
+			const propData = pair[1];
+			const attName = camelToKebabCase(propName);
+			const attribute = this.getAttribute(attName);
+			const attribute2 = this.getAttribute(`ui5-${attName}`);
+			const value = attribute || attribute2;
+			if (value === null) {
+				return;
+			}
+
+			if (propData.type === Boolean) {
+				this[propName] = true;
+			}
+
+			if (propData.type === Integer) {
+				this[propName] = parseInt(value);
+			}
+
+			this[propName] = value;
+		});
 	}
 
 	/**
