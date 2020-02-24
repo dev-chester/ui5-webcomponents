@@ -162,8 +162,7 @@ const metadata = {
  * @public
  */
 class Link extends UI5Element {
-	constructor() {
-		super();
+	init() {
 		this._dummyAnchor = document.createElement("a");
 		this.i18nBundle = getI18nBundle("@ui5/webcomponents");
 	}

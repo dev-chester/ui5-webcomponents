@@ -129,9 +129,7 @@ class YearPicker extends UI5Element {
 		return YearPickerTemplate;
 	}
 
-	constructor() {
-		super();
-
+	init() {
 		this._oLocale = getFormatLocale();
 
 		this._itemNav = new ItemNavigation(this, { rowSize: 4 });

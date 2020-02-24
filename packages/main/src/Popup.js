@@ -259,9 +259,7 @@ class Popup extends UI5Element {
 		return false;
 	}
 
-	constructor() {
-		super();
-
+	init() {
 		this._documentKeyDownHandler = this.documentKeyDown.bind(this);
 	}
 

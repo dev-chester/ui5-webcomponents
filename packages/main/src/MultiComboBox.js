@@ -304,9 +304,7 @@ class MultiComboBox extends UI5Element {
 		return ResponsivePopoverCommonCss;
 	}
 
-	constructor() {
-		super();
-
+	init() {
 		this._filteredItems = [];
 		this._inputLastValue = "";
 		this._deleting = false;

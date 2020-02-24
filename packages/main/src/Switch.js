@@ -152,9 +152,7 @@ class Switch extends UI5Element {
 		return SwitchTemplate;
 	}
 
-	constructor() {
-		super();
-
+	init() {
 		this.i18nBundle = getI18nBundle("@ui5/webcomponents");
 	}
 

@@ -87,9 +87,7 @@ const metadata = {
  * @public
  */
 class Badge extends UI5Element {
-	constructor() {
-		super();
-
+	init() {
 		this.i18nBundle = getI18nBundle("@ui5/webcomponents");
 	}
 

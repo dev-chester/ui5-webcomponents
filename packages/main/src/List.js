@@ -278,8 +278,7 @@ class List extends UI5Element {
 		return listCss;
 	}
 
-	constructor() {
-		super();
+	init() {
 		this.initItemNavigation();
 
 		// Stores the last focused item within the internal ul element.

@@ -186,9 +186,7 @@ class Table extends UI5Element {
 		return TableTemplate;
 	}
 
-	constructor() {
-		super();
-
+	init() {
 		this._itemNavigation = new ItemNavigation(this, {
 			navigationMode: NavigationMode.Vertical,
 		});

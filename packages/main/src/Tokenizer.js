@@ -89,9 +89,7 @@ class Tokenizer extends UI5Element {
 		this._invalidate();
 	}
 
-	constructor() {
-		super();
-
+	init() {
 		this._tokensCount = 0;
 		this._resizeHandler = this._handleResize.bind(this);
 		this._itemNav = new ItemNavigation(this);

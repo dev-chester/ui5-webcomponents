@@ -50,6 +50,19 @@ class UI5Element extends HTMLElement {
 
 		this._monitoredChildProps = new Map();
 		this._firePropertyChange = false;
+
+		const slotsAreManaged = this.constructor.getMetadata().slotsAreManaged();
+		const needsShadowDOM = this.constructor._needsShadowDOM();
+
+		if (this.init) {
+			this.init();
+		}
+
+		if (!slotsAreManaged) {
+			if (needsShadowDOM) {
+				RenderScheduler.renderImmediately(this);
+			}
+		}
 	}
 
 	/**
@@ -103,9 +116,9 @@ class UI5Element extends HTMLElement {
 				// always register the observer before yielding control to the main thread (await)
 				this._startObservingDOMChildren();
 				await this._processChildren();
+				await RenderScheduler.renderImmediately(this);
 			}
 
-			await RenderScheduler.renderImmediately(this);
 			this._domRefReadyPromise._deferredResolve();
 			if (typeof this.onEnterDOM === "function") {
 				this.onEnterDOM();

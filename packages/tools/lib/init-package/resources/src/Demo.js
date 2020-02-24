@@ -21,8 +21,7 @@ const metadata = {
 };
 
 class INIT_PACKAGE_VAR_CLASS_NAME extends UI5Element {
-	constructor() {
-		super();
+	init() {
 		this.i18nBundle = getI18nBundle("INIT_PACKAGE_VAR_NAME");
 	}
 

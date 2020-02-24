@@ -227,9 +227,7 @@ class Button extends UI5Element {
 		return ButtonTemplate;
 	}
 
-	constructor() {
-		super();
-
+	init() {
 		this._deactivate = () => {
 			if (this.active) {
 				this.active = false;

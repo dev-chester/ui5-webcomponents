@@ -34,8 +34,7 @@ const metadata = {
 
 class Demo extends UI5Element {
 
-	constructor() {
-		super();
+	init() {
 		this.i18nBundle = getI18nBundle("my-ui5-web-components");
 	}
 
@@ -312,7 +311,7 @@ There are generally 3 steps to that purpose:
  1. Fetch an i18n bundle during component definition
  `await fetchI18nBundle("my-ui5-web-components");`
  
- 2. (optional) Get a reference to the bundle in the constructor for convenience
+ 2. (optional) Get a reference to the bundle in the init method for convenience
  `this.i18nBundle = getI18nBundle("my-ui5-web-components");`
  
  3. Get texts from the bundle, according to the currently [configured](../Configuration.md) language.
@@ -348,8 +347,7 @@ const metadata = {
 
 class Demo extends UI5Element {
 
-	constructor() {
-		super();
+	init() {
 		this.i18nBundle = getI18nBundle("my-ui5-web-components");
 	}
 

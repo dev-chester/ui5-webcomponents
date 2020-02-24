@@ -122,9 +122,7 @@ class Token extends UI5Element {
 		return styles;
 	}
 
-	constructor() {
-		super();
-
+	init() {
 		this.i18nBundle = getI18nBundle("@ui5/webcomponents");
 	}
 

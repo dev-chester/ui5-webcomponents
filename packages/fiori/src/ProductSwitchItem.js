@@ -121,9 +121,7 @@ const metadata = {
  * @since 1.0.0-rc.5
  */
 class ProductSwitchItem extends UI5Element {
-	constructor() {
-		super();
-
+	init() {
 		this._deactivate = () => {
 			if (this.active) {
 				this.active = false;

@@ -78,9 +78,7 @@ const metadata = {
  * @since 0.12.0
  */
 class BusyIndicator extends UI5Element {
-	constructor() {
-		super();
-
+	init() {
 		this.i18nBundle = getI18nBundle("@ui5/webcomponents");
 	}
 

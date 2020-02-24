@@ -209,9 +209,7 @@ class TabContainer extends UI5Element {
 		return TabContainerPopoverTemplate;
 	}
 
-	constructor() {
-		super();
-
+	init() {
 		this._handleHeaderResize = this._handleHeaderResize.bind(this);
 
 		// Init ScrollEnablement

@@ -253,9 +253,7 @@ class TextArea extends UI5Element {
 		return TextAreaTemplate;
 	}
 
-	constructor() {
-		super();
-
+	init() {
 		this.i18nBundle = getI18nBundle("@ui5/webcomponents");
 	}
 

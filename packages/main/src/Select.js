@@ -193,9 +193,7 @@ class Select extends UI5Element {
 		return ResponsivePopoverCommonCss;
 	}
 
-	constructor() {
-		super();
-
+	init() {
 		this._syncedOptions = [];
 		this._selectedIndex = -1;
 		this._selectedIndexBeforeOpen = -1;

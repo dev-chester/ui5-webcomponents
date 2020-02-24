@@ -148,9 +148,7 @@ class MessageStrip extends UI5Element {
 		return messageStripCss;
 	}
 
-	constructor() {
-		super();
-
+	init() {
 		this.i18nBundle = getI18nBundle("@ui5/webcomponents");
 	}
 

@@ -348,8 +348,7 @@ class Input extends UI5Element {
 		return ResponsivePopoverCommonCss;
 	}
 
-	constructor() {
-		super();
+	init() {
 		// Indicates if there is selected suggestionItem.
 		this.hasSuggestionItemSelected = false;
 

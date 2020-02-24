@@ -65,9 +65,7 @@ class Timeline extends UI5Element {
 		return TimelineTemplate;
 	}
 
-	constructor() {
-		super();
-
+	init() {
 		this.initItemNavigation();
 	}
 

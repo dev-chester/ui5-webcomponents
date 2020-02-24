@@ -90,8 +90,7 @@ class SegmentedButton extends UI5Element {
 		return SegmentedButtonCss;
 	}
 
-	constructor() {
-		super();
+	init() {
 		this.initItemNavigation();
 
 		this.absoluteWidthSet = false; // set to true whenever we set absolute width to the component

@@ -156,8 +156,7 @@ class Calendar extends UI5Element {
 		return calendarCSS;
 	}
 
-	constructor() {
-		super();
+	init() {
 		this._oLocale = getFormatLocale();
 		this._oLocaleData = new LocaleData(this._oLocale);
 		this._header = {};

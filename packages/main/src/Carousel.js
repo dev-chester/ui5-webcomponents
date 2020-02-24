@@ -152,9 +152,7 @@ class Carousel extends UI5Element {
 		return 9;
 	}
 
-	constructor() {
-		super();
-
+	init() {
 		this._scrollEnablement = new ScrollEnablement(this);
 		this._scrollEnablement.attachEvent("touchend", event => {
 			this._updateScrolling(event);

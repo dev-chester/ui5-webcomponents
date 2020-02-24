@@ -199,9 +199,7 @@ const metadata = {
  * @public
  */
 class RadioButton extends UI5Element {
-	constructor() {
-		super();
-
+	init() {
 		this.i18nBundle = getI18nBundle("@ui5/webcomponents");
 	}
 

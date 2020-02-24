@@ -354,9 +354,7 @@ class ShellBar extends UI5Element {
 		};
 	}
 
-	constructor() {
-		super();
-
+	init() {
 		this._itemsInfo = [];
 		this._isInitialRendering = true;
 		this._focusedItem = null;

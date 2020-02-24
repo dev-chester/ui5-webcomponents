@@ -277,9 +277,7 @@ class DatePicker extends UI5Element {
 		return [datePickerPopoverCss, ResponsivePopoverCommonCss];
 	}
 
-	constructor() {
-		super();
-
+	init() {
 		this._respPopoverConfig = {
 			allowTargetOverlap: true,
 			stayOpenOnScroll: true,

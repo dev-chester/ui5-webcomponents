@@ -136,10 +136,6 @@ class TimelineItem extends UI5Element {
 		return styles;
 	}
 
-	constructor() {
-		super();
-	}
-
 	onItemNamePress() {
 		this.fireEvent("itemNameClick", {});
 	}

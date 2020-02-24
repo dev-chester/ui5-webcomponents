@@ -125,8 +125,7 @@ class MonthPicker extends UI5Element {
 		return styles;
 	}
 
-	constructor() {
-		super();
+	init() {
 		this._oLocale = getFormatLocale();
 		this._oLocaleData = new LocaleData(this._oLocale);
 

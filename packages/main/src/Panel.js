@@ -202,9 +202,7 @@ class Panel extends UI5Element {
 		return panelCss;
 	}
 
-	constructor() {
-		super();
-
+	init() {
 		this._header = {};
 		this.i18nBundle = getI18nBundle("@ui5/webcomponents");
 	}

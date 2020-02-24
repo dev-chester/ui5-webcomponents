@@ -58,8 +58,7 @@ const metadata = {
  * @public
  */
 class TableRow extends UI5Element {
-	constructor() {
-		super();
+	init() {
 		this.fnOnCellClick = this._oncellclick.bind(this);
 	}
 

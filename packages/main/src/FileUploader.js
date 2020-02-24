@@ -193,8 +193,7 @@ class FileUploader extends UI5Element {
 		return FileUploaderTemplate;
 	}
 
-	constructor() {
-		super();
+	init() {
 		if (this._canUseNativeFormSupport) {
 			this._internals = this.attachInternals();
 		}

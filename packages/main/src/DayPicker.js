@@ -161,8 +161,7 @@ class DayPicker extends UI5Element {
 		return dayPickerCSS;
 	}
 
-	constructor() {
-		super();
+	init() {
 		this._oLocale = getFormatLocale();
 		this._oLocaleData = new LocaleData(this._oLocale);
 

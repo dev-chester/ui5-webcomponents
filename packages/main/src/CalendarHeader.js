@@ -65,8 +65,7 @@ class CalendarHeader extends UI5Element {
 		return styles;
 	}
 
-	constructor() {
-		super();
+	init() {
 		this._btnPrev = {};
 		this._btnPrev.icon = "slim-arrow-left";
 
